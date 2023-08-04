@@ -1,0 +1,42 @@
+<!-- <div class="container" *ngFor="let article of articleList$ | async">
+  <div class="post-content" >
+    <img class="avatarUser" src="" alt="">
+    <h1>{{ article.title }}</h1>
+    <img  class="image-content" src="{{ article.cover_image }}" alt="" />
+    <div class="post-content">
+      <p>{{ article.description }}</p>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="card" *ngFor="let article of articleList$ | async">
+    <div class="card-header">
+        <!-- <div>{{article.readable_publish_date}}</div> -->
+        <a href="{{article.url}}"><img  src="{{ article.cover_image }}" alt="">
+        </a></div>
+    <div class="card-content">
+      <span>{{ article.title }}</span>
+      <div class="description"> {{ article.description }}</div>
+    </div>
+    <div class="card-footer">
+      <img src="{{article.user.profile_image}}" alt="">
+      <div class="author">
+        <p>{{article.user.name}}</p>
+        <small>{{article.readable_publish_date}}</small>
+        
+      </div>
+      <img class="btn" src="https://thenounproject.com/api/private/icons/1014431/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="">
+      <img class="btn"  src="https://thenounproject.com/api/private/icons/102544/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="">
+      <img class="btn"  src="https://thenounproject.com/api/private/icons/5903696/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="">
+      <!-- <mat-icon><span class="material-icons-outlined">
+        favorite
+        </span></mat-icon>
+        <mat-icon><span class="material-icons-outlined">
+          question_answer
+          </span></mat-icon>
+          <mat-icon><span class="material-icons-outlined">
+            share
+            </span></mat-icon> -->
+    </div>
+  </div>
